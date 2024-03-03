@@ -22,11 +22,12 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
+        sans: ['var(--font-interphase)', ...fontFamily.sans], 
+        mono: ['var(--font-jetbrains-mono)', ...fontFamily.mono],
       },
       colors: {
-        primary: colors.pink,
-        gray: colors.gray,
+        primary: colors.teal,
+        gray: colors.slate,
       },
       typography: ({ theme }) => ({
         DEFAULT: {

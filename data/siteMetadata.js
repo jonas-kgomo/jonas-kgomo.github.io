@@ -1,9 +1,9 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
+  title: 'Jonas Kgomo | Research Engineer',
+  author: 'Jonas Kgomo',
+  headerTitle: 'JK',
+  description: 'Jonas is a research engineer and founder of Equiano Institute. He studied mathematics at Istanbul University and Computer Science at Sussex University. He is also a researching formal theorem proving at Cambridge University under Sir. Timothy Gowers.   the University of Washington. He is interested in machine learning, computer vision, and computer graphics.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
@@ -68,7 +68,9 @@ const siteMetadata = {
       // transparent_dark, preferred_color_scheme, custom
       theme: 'light',
       // theme when dark mode
-      darkTheme: 'transparent_dark',
+      darkTheme: 'transparent_dark', 
+      // gold theme
+      // goldTheme: 'preferred_color_scheme',
       // If the theme option above is set to 'custom`
       // please provide a link below to your custom theme css file.
       // example: https://giscus.app/themes/custom_example.css

@@ -10,6 +10,7 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
+import TagPage from 'app/tags/[tag]/page'
 
 interface PaginationProps {
   totalPages: number
@@ -83,8 +84,19 @@ export default function ListLayoutWithTags({
             {title}
           </h1>
         </div>
+        <div className="flex flex-wrap">
+      {sortedTags.map((tag:any) => (
+        <div className="flex ring-2 ring-primary-600 flex-wrap m-2 gap-2" key={tag}>
+        
+        <Tag key={tag} text={tag}  />
+       <div className="-ml-2 bg-primary-800 px-2 p-1 text-sm font-semibold uppercase text-primary-100 dark:text-primary-100  "
+                    >
+       {tagCounts[tag]}  </div>
+        </div>
+      ))}
+    </div>
         <div className="flex sm:space-x-24">
-          <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded bg-gray-50 pt-5 shadow-md dark:bg-gray-900/70 dark:shadow-gray-800/40 sm:flex">
+          {/* <div className="hidden h-full max-h-screen min-w-[280px] max-w-[280px] flex-wrap overflow-auto rounded bg-gray-50 pt-5 shadow-md dark:bg-gray-900/70 dark:shadow-gray-800/40 sm:flex">
             <div className="px-6 py-4">
               {pathname.startsWith('/blog') ? (
                 <h3 className="font-bold uppercase text-primary-500">All Posts</h3>
@@ -118,7 +130,7 @@ export default function ListLayoutWithTags({
                 })}
               </ul>
             </div>
-          </div>
+          </div> */}
           <div>
             <ul>
               {displayPosts.map((post) => {

@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'Interphase';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: block;
+  src: url(/fonts/interphase.woff2) format('woff2');
+}
+
+html, body {
+  font-family: 'Interphase', sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  
+  font-variant: common-ligatures contextual;
+  letter-spacing: -0.02em;
+}
+
 .task-list-item::before {
   @apply hidden;
 }
@@ -11,7 +28,7 @@
 }
 
 .footnotes {
-  @apply mt-12 border-t border-gray-200 pt-8 dark:border-gray-700;
+  @apply mt-12 border-t border-gray-200 pt-8 ;
 }
 
 .data-footnote-backref {
@@ -33,3 +50,5 @@ input:-webkit-autofill:focus {
 .katex-display {
   overflow: auto hidden;
 }
+
+ 

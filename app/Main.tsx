@@ -3,7 +3,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
-import DigitalGarden from '@/components/Garden'
+ 
 import WorkHistory from '@/components/Garden'
 
 const MAX_DISPLAY = 3

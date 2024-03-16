@@ -3,7 +3,8 @@ const siteMetadata = {
   title: 'Jonas Kgomo | Research Engineer',
   author: 'Jonas Kgomo',
   headerTitle: 'JK',
-  description: 'Jonas is a research engineer and founder of Equiano Institute. He studied mathematics at Istanbul University and Computer Science at Sussex University. He is also a researching formal theorem proving at Cambridge University under Sir. Timothy Gowers.   the University of Washington. He is interested in machine learning, computer vision, and computer graphics.',
+  description:
+    'Jonas Kgomo is a research engineer and founder of Equiano Institute. He studied mathematics at Istanbul University and Computer Science at Sussex University. He is also a researching formal theorem proving at Cambridge University under Sir. Timothy Gowers and AI alignment, ethics and economics at Equiano Institute <a href="https:joinef.com" >Enterpreneur First</a>. Recently, hacking on a collaborative software.   ',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
@@ -11,13 +12,13 @@ const siteMetadata = {
   siteLogo: '/static/images/logo.png',
   socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
+  email: 'jonaskgmoo@gmail.com',
+  github: 'https://github.com/jonas-kgomo',
+  twitter: 'https://twitter.com/jonas_kg',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  threads: 'https://www.threads.net',
+  linkedin: 'https://www.linkedin.com/in/jonas-kgomo',
+  threads: 'https://read.cv/jonas',
   instagram: 'https://www.instagram.com',
   locale: 'en-US',
   analytics: {
@@ -68,7 +69,7 @@ const siteMetadata = {
       // transparent_dark, preferred_color_scheme, custom
       theme: 'light',
       // theme when dark mode
-      darkTheme: 'transparent_dark', 
+      darkTheme: 'transparent_dark',
       // gold theme
       // goldTheme: 'preferred_color_scheme',
       // If the theme option above is set to 'custom`

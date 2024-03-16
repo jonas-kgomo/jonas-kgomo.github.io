@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: 'Interphase';
   font-style: normal;
@@ -11,12 +10,19 @@
   src: url(/fonts/interphase.woff2) format('woff2');
 }
 
-html, body {
+html,
+body {
   font-family: 'Interphase', sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
-  
+
   font-variant: common-ligatures contextual;
   letter-spacing: -0.02em;
+}
+
+i {
+  font-family: 'Libre Baskerville';
+  font-weight: 500;
+  font-size: large;
 }
 
 .task-list-item::before {
@@ -28,7 +34,7 @@ html, body {
 }
 
 .footnotes {
-  @apply mt-12 border-t border-gray-200 pt-8 ;
+  @apply mt-12 border-t border-gray-200 pt-8;
 }
 
 .data-footnote-backref {
@@ -50,5 +56,3 @@ input:-webkit-autofill:focus {
 .katex-display {
   overflow: auto hidden;
 }
-
- 

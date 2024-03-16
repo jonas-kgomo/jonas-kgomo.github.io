@@ -1,7 +1,7 @@
 import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 
-import { JetBrains_Mono } from 'next/font/google'
+import { JetBrains_Mono, Libre_Baskerville } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -12,19 +12,21 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-const fontBrains = JetBrains_Mono({ 
+const fontBrains = JetBrains_Mono({
   variable: '--font-jetbrains-mono',
- subsets: ['latin'],
+  subsets: ['latin'],
 })
 
+const libre = JetBrains_Mono({
+  variable: '--font-libre',
+  subsets: ['latin'],
+})
 
 const interphase = localFont({
-
   src: '../public/fonts/interphase.woff2',
   variable: '--font-interphase',
   display: 'swap',
 })
-
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
@@ -70,7 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${interphase.variable} ${fontBrains.variable} scroll-smooth `}
+      className={`${interphase.variable} ${fontBrains.variable} ${libre.variable} scroll-smooth `}
       suppressHydrationWarning
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />

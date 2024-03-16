@@ -22,8 +22,9 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['var(--font-interphase)', ...fontFamily.sans], 
+        sans: ['var(--font-interphase)', ...fontFamily.sans],
         mono: ['var(--font-jetbrains-mono)', ...fontFamily.mono],
+        serif: ['var(--font-libre)', ...fontFamily.serif],
       },
       colors: {
         primary: colors.teal,

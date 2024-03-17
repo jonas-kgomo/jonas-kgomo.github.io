@@ -3,12 +3,10 @@
   "version": "2.1.0",
   "private": true,
   "scripts": {
-    "start": "next dev",
-    "dev": "cross-env INIT_CWD=$PWD next dev",
-    "build": "cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node ./scripts/postbuild.mjs",
-    "serve": "next start",
-    "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@next/bundle-analyzer": "14.1.0",
@@ -53,6 +51,7 @@
     "eslint-config-next": "14.1.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "gh-pages": "^6.1.1",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.0",
     "prettier": "^3.0.0",
@@ -76,6 +75,5 @@
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
     ]
-  },
-  "packageManager": "yarn@3.6.1"
+  }
 }

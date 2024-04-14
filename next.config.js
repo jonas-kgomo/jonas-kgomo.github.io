@@ -66,7 +66,7 @@ module.exports = () => {
       dirs: ['app', 'components', 'layouts', 'scripts'],
     },
     output: 'export',
-
+    legacyPeerDeps: true,
     images: {
       unoptimized: true,
       remotePatterns: [

@@ -12,16 +12,16 @@ const Header = () => {
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
-          <div className=" bg-gradient-to-br from-primary-600 to-primary-200 rounded-[10px] shadow-md  p-2 text-primary-800 items-center h-9 w-9 ">
-            
-           
-            {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-base font-medium sm:block">
-                {siteMetadata.headerTitle}
-              </div>
-            ) : (
-              siteMetadata.headerTitle
-            )} </div>
+            <img src="/static/images/logo.png" className="mr-3 h-8 w-8" />
+            <div className=" h-9 w-9  items-center rounded-[10px] p-2 text-primary-800 shadow-md ">
+              {typeof siteMetadata.headerTitle === 'string' ? (
+                <div className="hidden h-6 text-base font-medium sm:block">
+                  {siteMetadata.headerTitle}
+                </div>
+              ) : (
+                siteMetadata.headerTitle
+              )}{' '}
+            </div>
           </div>
         </Link>
       </div>

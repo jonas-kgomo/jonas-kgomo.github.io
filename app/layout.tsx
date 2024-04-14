@@ -85,11 +85,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <meta name="theme-color" media="(prefers-color-scheme: theme-swiss)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <body className="bg-teal-100/50 text-black antialiased dark:bg-teal-950 dark:text-teal-100  ">
+      <body className="bg-teal-100 text-black antialiased dark:bg-teal-950 dark:text-teal-100  ">
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SectionContainer>
-            <div className="flex h-screen flex-col justify-between font-sans">
+            <div className=" h-screen p-4  font-sans">
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <Header />
                 <main className="mb-auto">{children}</main>

@@ -27,16 +27,19 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <div className="grid grid-cols-2 gap-8">
+    <div className="grid grid-cols-2 gap-2 md:gap-8">
       {projects.map((project, index) => (
-        <div key={index} className="flex bg-primary-800 p-4 dark:bg-primary-600">
-          <div className="w-4/5 p-2 font-medium text-primary-100 dark:text-primary-800">
+        <div
+          key={index}
+          className="opacity-98 block bg-primary-800 p-0 dark:bg-primary-600 md:flex md:p-4"
+        >
+          <div className="w-4/5 p-2 font-medium text-primary-100 dark:text-primary-900">
             <p className="text-xl font-bold">{project.title} </p>
             <p>{project.description}</p>
           </div>
           {project.url && (
             <a href={project.url} className="text-xs text-primary-200 hover:underline">
-              <div className=" h-full w-32 text-wrap bg-primary-900 p-1 font-medium text-primary-100 hover:opacity-60">
+              <div className="h-12 w-32 text-wrap bg-primary-900 p-1 font-medium text-primary-100 hover:opacity-60 md:h-full">
                 {project.url.replace('https://', '').split('/')[0]} ⤴
               </div>
             </a>

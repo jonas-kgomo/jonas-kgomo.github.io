@@ -4,7 +4,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 
 import WorkHistory from '@/components/Garden'
-import Projects from './projects/page'
+// import Projects from './projects/page'
 import Portfolio from '@/components/Portfolio'
 
 const MAX_DISPLAY = 3
@@ -18,41 +18,61 @@ export default function Home({ posts }) {
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-teal-900 dark:text-teal-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Jonas Kgomo
           </h1>
-          <div className="flex    ">
+          <div className="block w-full justify-between md:flex">
             <div>
-              <p className="leading-light  max-w-lg bg-teal-900 p-4  text-lg font-medium text-teal-100 dark:bg-teal-900 dark:text-teal-100">
-                Jonas Kgomo is a research engineer and founder of Equiano Institute. He studied
-                mathematics at Istanbul University and Computer Science at Sussex University. He is
-                also a researching{' '}
-                <a href="https://wtgowers.github.io/human-style-atp/" className="px-1 font-bold">
+              <p className="leading-light  max-w-lg bg-teal-900 p-4  text-lg font-medium text-teal-200 dark:bg-teal-900 dark:text-teal-100">
+                Jonas Kgomo is a research engineer and founder of{' '}
+                <a href=" www.equiano.institute" className="px-1 font-semibold text-teal-300">
+                  Equiano Institute
+                </a>
+                . He studied mathematics at Istanbul University and Computer Science at Sussex
+                University. He is also a researching{' '}
+                <a
+                  href="https://wtgowers.github.io/human-style-atp/"
+                  className="px-1 font-semibold  text-teal-300"
+                >
                   human style theorem provers ⤴
                 </a>
-                at Cambridge University under Sir. Timothy Gowers and AI alignment, ethics and
-                economics at
-                <a href="https:equiano.institute" className="px-1 font-bold">
-                  Equiano Institute ⤴
+                at Cambridge University under Sir. Timothy Gowers and AI{' '}
+                <a
+                  href="https:equiano.institute/factored"
+                  className="px-1 font-semibold  text-teal-300"
+                >
+                  alignment ⤴
+                </a>
+                , ethics and
+                <a
+                  href="https:equiano.institute/economics"
+                  className="px-1 font-semibold  text-teal-300"
+                >
+                  economics ⤴
                 </a>
                 . Recently, hacking on a collaborative software. Previously at
-                <a href="https:joinef.com" className="px-1 font-bold">
+                <a href="https:joinef.com" className="px-1 font-semibold  text-teal-300">
                   Enterpreneur First ⤴
                 </a>
+                . I am contributing to the{' '}
+                <a href="https:plurality.net" className="px-1 font-bold">
+                  Plurality Book ⤴
+                </a>
+                by Glen Weyl
               </p>
             </div>
-            <div className=" leading-light ml-4 w-1/3  bg-teal-700 font-medium text-teal-100 dark:text-gray-400">
+            <div className=" leading-light  w-full bg-teal-700  font-medium text-teal-100 dark:text-gray-400 md:w-1/3">
               <div className="leading-light h-8 bg-teal-300 p-2 text-sm font-semibold text-teal-800 dark:text-primary-800">
                 Photography
               </div>
               <img
                 src="./static/images/dalle/DALLE-3.png"
                 alt="Jonas Kgomo"
-                className="m-2 mx-auto h-48 w-48 justify-between"
+                className="h-fullmd:h-48 m-2 mx-auto w-full justify-between md:w-48"
               />
             </div>
           </div>
         </div>
 
-        <div className="flex flex-wrap">
-          <div className="w-2/3">
+        <div className="block flex-wrap  md:flex">
+          <div className="w-full md:w-2/3">
             <div className="p-4 text-primary-900 dark:text-primary-100">
               <p className="text-xl font-medium  ">Essays</p>
               <p>Opinionated, longform narrative writing with an agenda</p>
@@ -81,7 +101,7 @@ export default function Home({ posts }) {
                           {summary}
                         </div> */}
                         </div>
-                        <div className="flex justify-between   text-sm">
+                        <div className="flex justify-between  text-xs md:text-sm">
                           <Link
                             href={`/blog/${slug}`}
                             className="text-primary-800 hover:text-primary-600 dark:text-primary-600 dark:hover:text-primary-300"
@@ -93,12 +113,12 @@ export default function Home({ posts }) {
                             </span>
                           </Link>
 
-                          <div className="-my-1 flex flex-wrap  border-l-2 border-primary-300  text-sm text-primary-800">
+                          <div className="primary-800 -my-1 flex  flex-wrap border-l-2  border-primary-300  text-xs md:text-sm">
                             {tags.map((tag) => (
-                              <div className="bg-primary-100  px-1 py-1  text-sm    text-primary-600 dark:text-primary-600 dark:text-primary-800">
+                              <div className="bg-primary-100  p-0 text-primary-600 dark:text-primary-600  dark:text-primary-800 md:p-1 ">
                                 <Link
                                   href={`/tags/${tag}`}
-                                  className="mr-3 text-sm font-medium   hover:text-primary-600 dark:hover:text-primary-400"
+                                  className="mr-3 font-medium hover:text-primary-600   dark:hover:text-primary-400 md:mr-0"
                                 >
                                   {tag.split(' ').join('-')}
                                 </Link>
@@ -114,7 +134,7 @@ export default function Home({ posts }) {
             })}
           </div>
 
-          <div className="w-1/3  dark:divide-gray-700">
+          <div className="w-full dark:divide-gray-700  md:w-1/3">
             <div className="p-4 text-primary-900 dark:text-primary-100">
               <p className="text-xl font-medium  ">Notes</p>
               <p>Loose, unopinionated notes on seeding ideas</p>
@@ -164,7 +184,7 @@ export default function Home({ posts }) {
           </p>
         </div>
         <WorkHistory />
-        <div className="p-4 text-primary-900 dark:text-primary-100">
+        <div className="mt-6 p-4 text-primary-900 dark:text-primary-100">
           <p className="text-xl font-medium  ">Projects : Demo Scenes</p>
           <p>
             I have worked in a variety of fields, including computer science, mathematics, and

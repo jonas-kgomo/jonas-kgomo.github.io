@@ -114,13 +114,14 @@ const Sidebar = ({ selectedJobIndex }) => {
 
   const job = jobs[selectedJobIndex]
   return (
-    <div className="sidebar  h-64 w-2/3 bg-primary-900 p-4 font-medium text-primary-200">
+    <div className="sidebar  h-full w-2/3 bg-primary-900 p-4 font-medium text-primary-200">
       <div className="flex">
         {job.title} <p className="text-medium pl-2 text-primary-400">@ {job.company}</p>
       </div>
-      <code> {job.range} </code>
+
       {/* Add more details here */}
-      <ul className="text-base">
+      <ul className="text-sm md:text-base ">
+        <code> {job.range} </code>
         {job.description.map((description, index) => (
           <li key={index}>• {description}</li>
         ))}
